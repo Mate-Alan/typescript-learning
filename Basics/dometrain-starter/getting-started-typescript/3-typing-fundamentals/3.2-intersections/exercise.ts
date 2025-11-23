@@ -14,3 +14,11 @@ interface Employee {
   employeeId: number;
   department: string;
 }
+
+type Staff = Person & Employee;
+let staff: Staff = {
+  name: "Alan",
+  age: 35,
+  employeeId: 123,
+  department :"IT"
+};

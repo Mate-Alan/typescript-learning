@@ -48,3 +48,12 @@ function getArea(shape: Shape) {
 Note that now the type is narrowed based on the `kind` property. Once TypeScript knows the `kind`, it knows the shape of the object, and thus, knows what fields are available.
 
 To clarify, the `kind` property could be named anything. You decide. The point is TypeScript is smart enough to narrow the type based on a property's value. Other common names for the discriminant property are `type` and `tag`.
+
+
+# my words:
+Das Discriminant ist das Feld, nach dem TypeScript in einer Union unterscheiden („discriminieren“) kann – z. B. kind, type, status usw.
+
+Damit eine Union „discriminated“ ist, braucht man:
+- Eine Union von Objekt-Typen
+- Alle Varianten haben dieselbe Property (z. B. kind)
+- Diese Property hat pro Variante einen Literal-Typ (z. B. "circle", "square")

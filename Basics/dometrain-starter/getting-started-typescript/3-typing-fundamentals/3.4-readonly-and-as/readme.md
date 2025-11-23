@@ -41,3 +41,5 @@ const point = { x: 10, y: 20 } as const;
 // This fails
 // point.x = 5; // Error: Cannot assign to 'x' because it's a readonly property.
 ```
+
+if const is on the left side of a variable declaration this means you cant change the reference is const is used as part of "as const" you make the object immutable.
